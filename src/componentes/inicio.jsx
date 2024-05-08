@@ -17,8 +17,12 @@ const[personajes, setPersonaje]= useState([])
 const getPersonajes = async (url) => {
     const resp = await fetch(url);
     const json = await resp.json();
-    console.log(json);
+    //console.log(json);
+    setPersonaje(json.data.results)
 }
+
+console.log('personajes',personajes)
+
 // Usar useEffect para traer los personajes
 useEffect(()=>{
     getPersonajes(`http://gateway.marvel.com/v1/public/characters?ts=${TS}&apikey=${PUBLIC_KEY}&hash=${HASH}`)
