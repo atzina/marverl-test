@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import Inicio from './componentes/inicio'
 import {Routes, Route} from "react-router-dom"
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js';
 
 // Hacer uno componentes-
 // usar router para ponerles una ruta -
