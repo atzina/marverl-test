@@ -27,12 +27,20 @@ console.log('personajes',personajes)
 useEffect(()=>{
     getPersonajes(`http://gateway.marvel.com/v1/public/characters?ts=${TS}&apikey=${PUBLIC_KEY}&hash=${HASH}`)
 }, [])
-// Retornalos para que aparezcan en la interfaz
+// Retornalos para que aparezcan en la interfaz -
 // trabajar en su css
 
     return (
         <>
-            <h1>Inicio</h1>
+            <h1>Personajes de Marvel</h1>
+
+            <div>
+                {personajes.map(personaje=>(
+                    <div key={personaje.id}>
+                        <img src={personaje.thumbnail.path+'.'+personaje.thumbnail.extension}></img>
+                    </div>
+                ))}
+            </div>
         </>
     )
 }
