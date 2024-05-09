@@ -3,3 +3,7 @@ img {
     height: 200px; /* Establece aquí la altura deseada */
     object-fit: cover; /* Esto asegura que la imagen se ajuste al contenedor */
 }
+
+.card {
+    text-align: center;
+}
